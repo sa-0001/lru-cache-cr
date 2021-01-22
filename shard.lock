@@ -1,0 +1,6 @@
+version: 2.0
+shards:
+  tap:
+    path: /git/desi/repos/cr-tap
+    version: 0.0.1
+

@@ -1,0 +1,14 @@
+name: lru-cache
+version: 0.0.1
+authors:
+  - sa-0001
+description: |
+  LRU cache
+license: MIT
+
+crystal: 0.35.1
+
+development_dependencies:
+  tap:
+    github: https://github.com/sa-0001/tap-cr.git
+    version: ~> 0.0.1
