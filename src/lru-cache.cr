@@ -1,11 +1,11 @@
 ##======================================================================================================================
 
-class LRUCache
+class LRUCache(T)
 	class Error < Exception
 	end
 	
 	def initialize (*, max_items : Int32 | Nil = nil, max_bytes : Int32 | Nil  = nil)
-		@hash = {} of String => Hash(String, String)
+		@hash = {} of String => T
 		
 		@max_items = max_items
 		@max_bytes = max_bytes
@@ -48,9 +48,7 @@ class LRUCache
 	
 	def bytes
 		@hash.reduce(0) do |acc, item|
-			acc + item[1].reduce(0) do |subacc, subitem|
-				subacc + subitem[0].bytesize + subitem[1].bytesize
-			end
+			acc + item[0].bytesize + item[1].bytesize
 		end
 	end
 	def keys
